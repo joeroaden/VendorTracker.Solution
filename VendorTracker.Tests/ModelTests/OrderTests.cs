@@ -24,7 +24,7 @@ namespace VendorTracker.Tests
     public void GetTitle_ReturnsTitle_Order()
     {
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
-      Assert.AreEqual("testTitl", newOrder.Title);
+      Assert.AreEqual("testTitle", newOrder.Title);
     }
   }
 }
