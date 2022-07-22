@@ -48,5 +48,13 @@ namespace VendorTracker.Tests
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
       Assert.AreEqual("testDate", newOrder.Date);
     }
+
+    [TestMethod]
+    public void OrderConstructor_SetTitle_string()
+    {
+      Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
+      newOrder.Title = "newTestTitle";
+      Assert.AreEqual("testTitle", newOrder.Title);
+    }
   }
 }
