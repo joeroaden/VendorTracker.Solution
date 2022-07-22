@@ -46,7 +46,7 @@ namespace VendorTracker.Tests
     public void GetDate_ReturnsDate_Order()
     {
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
-      Assert.AreEqual("testDat", newOrder.Date);
+      Assert.AreEqual("testDate", newOrder.Date);
     }
   }
 }
