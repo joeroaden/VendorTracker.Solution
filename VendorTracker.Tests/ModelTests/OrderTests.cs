@@ -54,7 +54,7 @@ namespace VendorTracker.Tests
     {
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
       newOrder.Title = "newTestTitle";
-      Assert.AreEqual("testTitle", newOrder.Title);
+      Assert.AreEqual("newTestTitle", newOrder.Title);
     }
   }
 }
