@@ -34,5 +34,12 @@ namespace VendorTracker.Tests
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
       Assert.AreEqual("testDescription", newOrder.Description);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_Order()
+    {
+      Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
+      Assert.AreEqual(11, newOrder.Price);
+    }
   }
 }
