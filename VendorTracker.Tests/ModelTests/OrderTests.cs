@@ -39,7 +39,7 @@ namespace VendorTracker.Tests
     public void GetPrice_ReturnsPrice_Order()
     {
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
-      Assert.AreEqual(11, newOrder.Price);
+      Assert.AreEqual(10, newOrder.Price);
     }
   }
 }
