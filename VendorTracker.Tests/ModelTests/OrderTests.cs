@@ -56,5 +56,19 @@ namespace VendorTracker.Tests
       newOrder.Title = "newTestTitle";
       Assert.AreEqual("newTestTitle", newOrder.Title);
     }
+    [TestMethod]
+    public void OrderConstructor_SetAllProperties_string()
+    {
+      Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
+      newOrder.Title = "newTestTitle";
+      newOrder.Description = "newTestDescription";
+      newOrder.Price = 11;
+      newOrder.Date = "newTestDate";
+      Assert.AreEqual("newTestTitle", newOrder.Title);
+      Assert.AreEqual("newTestDescriptio", newOrder.Description);
+      Assert.AreEqual(11, newOrder.Price);
+      Assert.AreEqual("newTestDate", newOrder.Date);
+    }
+
   }
 }
