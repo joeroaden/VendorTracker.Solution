@@ -6,13 +6,13 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class OrderTests //: IDisposable
+  public class OrderTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Item.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -68,6 +68,14 @@ namespace VendorTracker.Tests
       Assert.AreEqual("newTestDescription", newOrder.Description);
       Assert.AreEqual(11, newOrder.Price);
       Assert.AreEqual("newTestDate", newOrder.Date);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> newResult = Order.GetAll();
+      CollectionAssert.AreEqual(newList, newResult);
     }
 
   }

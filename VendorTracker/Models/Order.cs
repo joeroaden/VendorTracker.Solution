@@ -9,7 +9,7 @@ namespace VendorTracker.Models
     public int Price { get; set; }
     public string Date { get; set; }
     public int Id { get; }
-    // private static List<Item> _instances = new List<Item> {};
+    private static List<Order> _instances = new List<Order> { };
 
     public Order(string title, string description, int price, string date)
     {
@@ -17,8 +17,16 @@ namespace VendorTracker.Models
       Description = description;
       Price = price;
       Date = date;
-      // _instances.Add(this);
-      // Id = _instances.Count;
+      _instances.Add(this);
+      Id = _instances.Count;
+    }
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
