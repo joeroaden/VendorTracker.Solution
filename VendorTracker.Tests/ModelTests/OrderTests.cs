@@ -32,7 +32,7 @@ namespace VendorTracker.Tests
     public void GetDescription_ReturnsDescription_Order()
     {
       Order newOrder = new Order("testTitle", "testDescription", 10, "testDate");
-      Assert.AreEqual("testDescriptio", newOrder.Description);
+      Assert.AreEqual("testDescription", newOrder.Description);
     }
   }
 }
