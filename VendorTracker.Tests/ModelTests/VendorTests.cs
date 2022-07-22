@@ -46,13 +46,30 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void VendorConstructor_ReturnsAllVendorObjects_VendorList()
+    public void VendorConstructor_ReturnsVendorName_VendorName()
     {
       string name = "test vendor name";
       string description = "test description";
       
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(name, newVendor.Name);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string name = "test vendor name";
+      string description = "test description";
+      string name2 = "test vendor name2";
+      string description2 = "test description2";
+      
+      Vendor newVendor = new Vendor(name, description);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> newList = new List<Vendor> {newVendor, newVendor2};
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
     }
     }
 }
