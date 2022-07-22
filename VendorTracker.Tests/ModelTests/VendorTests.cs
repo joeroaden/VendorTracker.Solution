@@ -71,5 +71,21 @@ namespace VendorTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name = "test vendor name";
+      string description = "test description";
+      string name2 = "test vendor name2";
+      string description2 = "test description2";
+
+      Vendor newVendor = new Vendor(name, description);
+      Vendor newVendor2 = new Vendor(name2, description2);
+
+      Vendor result = Vendor.Find(2);
+
+      Assert.AreEqual(newVendor, result);
+    }
     }
 }
