@@ -79,7 +79,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsListOfJobOpenings_OrderList()
+    public void GetAll_ReturnsListOfOrders_OrderList()
     {
       Order order1 = new Order("testTitleOne", "testDescriptionOne", 10, "testDate");
       Order order2 = new Order("testTitleTwo", "testDescriptionTwo", 11, "testDate");
@@ -88,6 +88,16 @@ namespace VendorTracker.Tests
       List<Order> newList = new List<Order> { order1, order2 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsOrderAtId_Orde()
+    {
+      Order order1 = new Order("testTitleOne", "testDescriptionOne", 10, "testDate");
+      Order order2 = new Order("testTitleTwo", "testDescriptionTwo", 11, "testDate");
+
+      Order findOrder = Order.Find(2);
+      Assert.AreEqual(order2, findOrder);
     }
   }
 }
