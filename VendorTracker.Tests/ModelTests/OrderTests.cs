@@ -65,7 +65,7 @@ namespace VendorTracker.Tests
       newOrder.Price = 11;
       newOrder.Date = "newTestDate";
       Assert.AreEqual("newTestTitle", newOrder.Title);
-      Assert.AreEqual("newTestDescriptio", newOrder.Description);
+      Assert.AreEqual("newTestDescription", newOrder.Description);
       Assert.AreEqual(11, newOrder.Price);
       Assert.AreEqual("newTestDate", newOrder.Date);
     }
